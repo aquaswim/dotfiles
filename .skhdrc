@@ -160,6 +160,7 @@ ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 ctrl + alt - t : open -a iTerm
 #ctrl + alt - enter : open -a iTerm
 ctrl + alt - b : open -a "Firefox"
+ctrl + alt - n : open -a "Notion"
 cmd - e : open -a finder
 
 # focus next, prev window
