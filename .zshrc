@@ -109,3 +109,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias dvb-start="brew services start docker-virtualbox"
 alias dvb-stop="brew services stop docker-virtualbox"
+export PATH="/usr/local/sbin:$PATH"
