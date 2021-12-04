@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm zsh-autosuggestions)
+plugins=(git nvm zsh-autosuggestions tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,3 +110,7 @@ export NVM_DIR="$HOME/.nvm"
 alias dvb-start="brew services start docker-virtualbox"
 alias dvb-stop="brew services stop docker-virtualbox"
 export PATH="/usr/local/sbin:$PATH"
+
+# tmux plugins
+export ZSH_TMUX_AUTOSTART="true"
+#export ZSH_TMUX_ITERM2="true"
