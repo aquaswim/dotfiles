@@ -30,9 +30,16 @@ map Q gq
 " Find more examples here: https://jb.gg/share-ideavimrc
 set ic
 
+" Relative Line number
+set relativenumber
+set number
+
 " Plugins
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+
+" Multi cursor
+Plug 'terryma/vim-multiple-cursors'
 
 " My Action shortcuts"
 map \r <Action>(ReformatCode)
@@ -41,3 +48,4 @@ map \[ <Action>(PreviousTab)
 map \x <Action>(CloseAllUnpinnedEditors)
 map \j <Action>(EditorCloneCaretBelow)
 map \k <Action>(EditorCloneCaretAbove)
+map \sn <Action>(SelectNextOccurrence)
