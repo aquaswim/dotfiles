@@ -12,4 +12,4 @@
 
 ### Important
 change the keyboard modifier in System Preferences > Keyboard > Modifier Keys.
-Swap the option and command for external keyboard
+Swap the control and command for external keyboard
