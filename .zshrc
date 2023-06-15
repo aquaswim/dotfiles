@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/aquaswim/.oh-my-zsh"
+export ZSH="/Users/skyshim1-aqua/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm zsh-autosuggestions tmux)
+plugins=(git zsh-autosuggestions tmux taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# hide agnoser user@hostname
+export DEFAULT_USER=skyshim1-aqua
+prompt_context(){}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -114,3 +118,30 @@ export PATH="/usr/local/sbin:$PATH"
 # tmux plugins
 export ZSH_TMUX_AUTOSTART="true"
 #export ZSH_TMUX_ITERM2="true"
+#Gcloud sdk
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+# Go private
+export GOPRIVATE="gitlab.com/bridigital/*"
+export GO111MODULE=auto
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
+# my alias
+alias ry-p="gcloud config get project"
+alias ry-p-d="gcloud config set project bridgtl-k8s-d-prj-kubecluster && gcloud container clusters get-credentials bridgtl-k8s-d-gke-cluster  --internal-ip"
+alias ry-p-p="gcloud config set project bridgtl-k8s-p-prj-kubecluster && gcloud container clusters get-credentials bridgtl-k8s-p-gke-cluster --internal-ip --region=asia-southeast2"
+alias rykb="kubectl --namespace=superapps"
+alias ryhelm="helm -n superapps"
+alias rykbgp="kubectl --namespace=superapps get pods | grep"
+## alias rykbsh="print rykb exec -it $1 -c chart -- /bin/sh"
+
+# java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# add .NET Core SDK tools
+export PATH="$PATH:/Users/skyshim1-aqua/.dotnet/tools"
+
+# show task
+task

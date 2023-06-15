@@ -7,10 +7,10 @@
 ########## Variables
 
 # dotfiles directory
-dir=/Users/aquaswim/code/dotfiles
+dir=/Users/skyshim1-aqua/code/dotfiles
 
 # old dotfiles backup directory
-olddir=/Users/aquaswim/code/dotfiles/old
+olddir=/Users/skyshim1-aqua/code/dotfiles/old
 
 # list of files/folders to symlink in homedir
 files="zshrc yabairc skhdrc ideavimrc"
