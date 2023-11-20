@@ -13,7 +13,7 @@ dir=/Users/skyshim1-aqua/code/dotfiles
 olddir=/Users/skyshim1-aqua/code/dotfiles/old
 
 # list of files/folders to symlink in homedir
-files="zshrc yabairc skhdrc ideavimrc"
+files="zshrc yabairc skhdrc ideavimrc alacritty.yml"
 
 ##########
 
