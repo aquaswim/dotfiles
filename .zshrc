@@ -135,6 +135,7 @@ alias ry-p-p="gcloud config set project bridgtl-k8s-p-prj-kubecluster && gcloud 
 alias rykb="kubectl --namespace=superapps"
 alias ryhelm="helm -n superapps"
 alias rykbgp="kubectl --namespace=superapps get pods | grep"
+alias rykbgd="kubectl --namespace=superapps get deployments | grep"
 ## alias rykbsh="print rykb exec -it $1 -c chart -- /bin/sh"
 
 # java

@@ -55,3 +55,5 @@ command! Run action Run
 command! Stop action Stop
 command! GC action CheckinProject
 command! Fetch action Git.Fetch
+command! GPull action Git.Pull
+command! CPR copilot.requestCompletions
