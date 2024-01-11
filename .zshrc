@@ -128,15 +128,28 @@ export GO111MODULE=auto
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# raya script
+function set_proxy_env() {
+    echo "setting proxy to $1"
+    export http_proxy=$1
+    export https_proxy=$1
+}
+
+function unset-proxy() {
+        unset http_proxy
+        unset https_proxy
+}
+
 # my alias
 alias ry-p="gcloud config get project"
-alias ry-p-d="gcloud config set project bridgtl-k8s-d-prj-kubecluster && gcloud container clusters get-credentials bridgtl-k8s-d-gke-cluster  --internal-ip"
-alias ry-p-p="gcloud config set project bridgtl-k8s-p-prj-kubecluster && gcloud container clusters get-credentials bridgtl-k8s-p-gke-cluster --internal-ip --region=asia-southeast2"
+alias ry-p-d="set_proxy_env http://10.99.0.6:80 && gcloud config set project bridgtl-k8s-d-prj-kubecluster && gcloud container clusters get-credentials bridgtl-k8s-d-gke-cluster  --internal-ip"
+alias ry-p-p="set_proxy_env http://10.99.48.188:80 && gcloud config set project bridgtl-k8s-p-prj-kubecluster && gcloud container clusters get-credentials bridgtl-k8s-p-gke-cluster --internal-ip --region=asia-southeast2"
 alias rykb="kubectl --namespace=superapps"
 alias ryhelm="helm -n superapps"
 alias rykbgp="kubectl --namespace=superapps get pods | grep"
 alias rykbgd="kubectl --namespace=superapps get deployments | grep"
 ## alias rykbsh="print rykb exec -it $1 -c chart -- /bin/sh"
+alias rycekproxy="echo \"http: $http_proxy | https: $https_proxy\""
 
 # java
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
